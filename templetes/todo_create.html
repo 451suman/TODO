@@ -1,0 +1,20 @@
+
+{% extends "base.html" %} 
+{% block content %} 
+
+<h1 class="text-center">CREATE TODO FORM</h1>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="title" value="" placeholder="Add the to do list ..." class="form-control" id="title" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" class="form-control" id="" required> </textarea>
+    </div>
+    <button type="submit" name="">Submit</button>
+</form>
+
+{% endblock %}
