@@ -6,7 +6,7 @@
   <div class="col">
     <div class="card h-100">
       <div class="card-body">
-        <h5 class="card-title">{{ todo.title }}</h5>
+        <h5 class="card-title text-center text-primary text-uppercase">{{ todo.title }}</h5>
         <p class="card-text">{{ todo.description }}</p>
         <a href="/update/{{todo.pk }}" class="btn btn-success">Update </a>
         <a href="/delete/{{ todo.pk }}/" class="btn btn-danger">Delete</a>
@@ -16,3 +16,4 @@
   {% endfor %}
   {% endblock %}
 </div>
+

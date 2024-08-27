@@ -6,11 +6,11 @@
 
     <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input type="text" name="title" value="{{todo.title}}" class="form-control" id="title" required>
+        <input type="text" name="title" maxlength="50" value="{{todo.title}}" class="form-control" id="title" required>
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="description" class="form-control" id="" required> {{todo.description}} </textarea>
+        <textarea name="description" maxlength="100" class="form-control" id="" required> {{todo.description}} </textarea>
     </div>
     <button type="submit" name="">Submit</button>
 </form>
