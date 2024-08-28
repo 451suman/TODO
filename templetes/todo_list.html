@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="text-center " >MY TODO LIST</h1>
-<div class="mb-2"><a href="/create/" class="btn btn-info"> CREATE TODO</a></div>
+<div class="mb-2"><a href="{% url 'create' %}" class="btn btn-info"> CREATE TODO</a></div>
 <div class="row row-cols-1 row-cols-md-6 g-4">
   {% for todo in todos %}
   <div class="col">
@@ -8,8 +8,8 @@
       <div class="card-body">
         <h5 class="card-title text-center text-primary text-uppercase">{{ todo.title }}</h5>
         <p class="card-text">{{ todo.description }}</p>
-        <a href="/update/{{todo.pk }}" class="btn btn-success">Update </a>
-        <a href="/delete/{{ todo.pk }}/" class="btn btn-danger">Delete</a>
+        <a href="{% url 'update' todo.id %}" class="btn btn-success">Update </a>
+        <a href="{% url 'delete' todo.id %}" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
